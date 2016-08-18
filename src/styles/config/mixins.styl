@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+//
+//      Config - Mixins
+//
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+//
+//      Break
+//
+// -----------------------------------------------------------------------------
+
+// A breakpoint mixin, to easily use media queries in the style sheets. It
+// Lleverages the breakpoints hash.
+// 
+// Usage
+// =====
+//
+// .el
+//   display: none
+//   +break(sm)
+//     display: block
+// 
+// Compiles to
+// ===========
+//
+// .el {
+//   display: none
+// }
+// 
+// @media (min-width: 40rem) {
+//   display: block
+// }
+//
+// See the breakpoinst hash inside config/variables for the allowed size keys.
+
+break(size)
+  @media (min-width: breakpoints[size])
+    {block}

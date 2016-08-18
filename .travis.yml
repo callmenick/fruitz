@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- '5.5'
+branches:
+  only:
+  - master
+notifications:
+  email:
+    recipients:
+    - nick@callmenick.com
+    on_success: change
+    on_failure: always
+install:
+- npm install
+- if [ "$TRAVIS_BRANCH" == "master" ] ; then npm run build:production ; fi
+deploy:
+  provider: heroku
+  strategy: api
+  skip_cleanup: true
+  api_key:
+    secure: KEY
+  app:
+    master: fruitz

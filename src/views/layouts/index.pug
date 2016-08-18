@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title= meta && meta.title ? meta.title : "Fruitz - Welcome to Fruitz"
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(http-equiv="Content-Language", content="en-us")
+    meta(name="viewport", content="initial-scale=1.0, minimum-scale=1.0, width=device-width")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable" content="no")
+    meta(name="description" content= meta && meta.description ? meta.description : "Just some fruitz!")
+
+    //- Twitter meta tags
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content="@AxiomZenTeam")
+    meta(name="twitter:title" content= meta && meta.title ? meta.title : "Fruitz - Welcome to Fruitz")
+    meta(name="twitter:description" content= meta && meta.description ? meta.description : "Fruitz is a website and webapp starter template!")
+    meta(name="twitter:image", content="/img/og/az-og.png")
+    meta(name="twitter:url", content="https://www.axiomzen.co")
+
+    //- Open Graph meta tags
+    meta(property="og:type" content="website")
+    meta(property="og:site_name" content="Fruitz")
+    meta(property="og:title" content= meta && meta.title ? meta.title : "Fruitz - Welcome to Fruitz")
+    meta(property="og:description" content= meta && meta.description ? meta.description : "Fruitz is a website and webapp starter template!")
+    meta(property="og:image", content="/img/og/az-og.png")
+    meta(property="og:url", content="https://www.axiomzen.co")
+
+    //- Favicon
+    link(rel="apple-touch-icon", sizes="180x180", href="/img/icons/apple-touch-icon.png")
+    link(rel="icon", type="image/png", href="/img/icons/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="/img/icons/favicon-16x16.png", sizes="16x16")
+    link(rel="manifest", href="/img/icons/manifest.json")
+    link(rel="mask-icon", href="/img/icons/safari-pinned-tab.svg" color="#5bbad5")
+    link(rel="shortcut icon", href="/img/icons/favicon.ico")
+    meta(name="msapplication-config", content="/img/icons/browserconfig.xml")
+    meta(name="theme-color", content="#ffffff")
+
+    //- inject:css
+    link(rel="stylesheet", href="/css/style.css")
+    //- endinject
+
+  body
+    block body
+
+    //- main:js
+    script(src="/js/main.js")
+    //- endinject
+
+    //- Google Analytics
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'xxxxx', 'auto');
+      ga('send', 'pageview');
+
+    block extra-scripts
